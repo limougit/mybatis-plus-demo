@@ -16,6 +16,7 @@ class MyabtisPlusApplicationTests {
     void contextLoads() {
         User user = userService.getById(1);
         System.out.println(user);
+        System.out.println("this is my demo");
     }
 
 }
