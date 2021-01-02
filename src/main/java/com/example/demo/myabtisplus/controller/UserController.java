@@ -1,9 +1,8 @@
 package com.example.demo.myabtisplus.controller;
 
-import com.example.demo.myabtisplus.entity.User;
+import com.example.demo.myabtisplus.domain.entity.User;
 import com.example.demo.myabtisplus.service.UserService;
-import com.example.demo.myabtisplus.vo.Result;
-import lombok.experimental.PackagePrivate;
+import com.example.demo.myabtisplus.domain.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

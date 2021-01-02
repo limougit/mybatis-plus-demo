@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.myabtisplus.dao.EmployeesDao">
+    <select id="customizedPage" resultType="com.example.demo.myabtisplus.domain.dto.EmpDto">
+        select emp.employee_id employeeId,emp.department_id departmentId,emp.commission_pct
+        commissionPct,emp.email,emp.first_name firstName,emp.last_name lastName,emp.hire_date hireDate,emp.job_id jobId,
+        emp.manager_id managerId,emp.salary,emp.phone_number phoneNumber,dept.department_name
+        departmentName,lct.location_id locationId,lct.city,lct.postal_code postalCode,
+        lct.state_province stateProvince,lct.street_address streetAddress
+        from employees emp
+        left join departments dept on dept.department_id = emp.department_id
+        left join locations lct on dept.location_id = lct.location_id
+        <where>
+            <if test="param.firstName != null and param.firstName != ''">
+                and emp.first_name = #{param.firstName}
+            </if>
+        </where>
+    </select>
+</mapper>

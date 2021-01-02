@@ -1,4 +1,4 @@
-package com.example.demo.myabtisplus.entity;
+package com.example.demo.myabtisplus.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
