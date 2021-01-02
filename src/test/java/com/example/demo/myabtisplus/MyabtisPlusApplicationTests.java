@@ -1,6 +1,6 @@
 package com.example.demo.myabtisplus;
 
-import com.example.demo.myabtisplus.entity.User;
+import com.example.demo.myabtisplus.domain.entity.User;
 import com.example.demo.myabtisplus.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +16,7 @@ class MyabtisPlusApplicationTests {
     void contextLoads() {
         User user = userService.getById(1);
         System.out.println(user);
+        System.out.println("this is my demo");
     }
 
 }
